@@ -15,7 +15,7 @@ except IOError:
     print 'No sessionstore.js file found!'
     sys.exit()
 
-def calendar_open(data):
+def get_tabs(data):
     for window in data['windows']:
         for tab in window['tabs']:
             for entry in tab['entries']:
@@ -23,4 +23,4 @@ def calendar_open(data):
         print '---------------------'
 
 
-calendar_open(data)
+get_tabs(data)
